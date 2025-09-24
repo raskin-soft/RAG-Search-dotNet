@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RAG-Search", "RAG-Search\RAG-Search.csproj", "{621C8708-1BFA-46C1-BEFF-EC87F4CB14FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{621C8708-1BFA-46C1-BEFF-EC87F4CB14FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621C8708-1BFA-46C1-BEFF-EC87F4CB14FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621C8708-1BFA-46C1-BEFF-EC87F4CB14FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621C8708-1BFA-46C1-BEFF-EC87F4CB14FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8977D1FF-F8E1-48D1-93A9-5AADBB8E8694}
+	EndGlobalSection
+EndGlobal
