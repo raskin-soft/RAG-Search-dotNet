@@ -12,18 +12,21 @@ namespace RAG_Search.Controllers
         private readonly IConfiguration _config;
         private readonly SqlChunkLoaderService _sqlChunkLoaderService;
 
+
         public RagController(
             OpenAIEmbeddingService embedding,
             QdrantService qdrant,
             RagQueryService ragQuery,
             IConfiguration config,
             SqlChunkLoaderService sqlChunkLoaderService)
+
         {
             _embedding = embedding;
             _qdrant = qdrant;
             _ragQuery = ragQuery;
             _config = config;
             _sqlChunkLoaderService = sqlChunkLoaderService;
+
         }
 
         [HttpGet("index")]
@@ -111,24 +114,20 @@ namespace RAG_Search.Controllers
 
                 // Step 3: Prepare payload
                 var pointId = $"{docId}-{i}";
-                //var payload = new Dictionary<string, object>
-                //{
-                //    ["documentId"] = docId.ToString(),
-                //    ["chunkIndex"] = i,
-                //    ["preview"] = chunk.Length > 200 ? chunk.Substring(0, 200) : chunk
-                //};
 
                 var payload = new Dictionary<string, object>
                 {
                     ["documentId"] = docId.ToString(),
                     ["chunkIndex"] = i,
                     ["preview"] = chunk.Length > 200 ? chunk.Substring(0, 200) : chunk,
+
                     ["fileName"] = "SQL Database"
                 };
 
                 // Step 4: Upsert chunk to Qdrant
                 await _qdrant.UpsertChunkAsync(pointId, embArray, payload);
             }
+
 
             ViewBag.Message = $"Uploaded SQL Database and indexed {chunks.Count} chunks.";
             //return RedirectToAction("Index");
@@ -152,6 +151,7 @@ namespace RAG_Search.Controllers
             ViewBag.SourceDocuments = files[0].ToString(); ;
             ViewBag.Question = question;
             ViewBag.Answer = answer;
+
             //return RedirectToAction("Index");
             return View("Index");
         }

@@ -13,7 +13,6 @@ builder.Services.AddSingleton<RagQueryService>();
 builder.Services.AddSingleton<SqlChunkLoaderService>();
 builder.Services.AddControllers();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

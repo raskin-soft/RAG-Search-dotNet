@@ -68,7 +68,7 @@ namespace RAG_Search.Services
         private async Task<string> CallOpenAIAsync(string prompt)
         {
             var apiKey = _cfg["OpenAI:ApiKey"];
-            
+
             var model = _cfg["OpenAI:Model"] ?? "gpt-4o-mini";
             var req = new
             {

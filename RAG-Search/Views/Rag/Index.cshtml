@@ -8,14 +8,21 @@
 
     .card-header {
         background:lavender;
+<<<<<<< HEAD
         font-weight:bold;
+=======
+>>>>>>> d6274c67d4b4082a9d0080a4a150dc1192074b49
     }
 </style>
 
 <div class="container py-5">
+<<<<<<< HEAD
     <h2 class="text-center mb-4">🔍 RAG Search Portal in .NET</h2>
     <h5 class="text-center mb-4">[.NET 8, OpenAI Embedding , Qdrant Vector DB, Semantic Search, Data Source - PDF, Azure SQL DB]</h5>
     <hr />
+=======
+    <h2 class="text-center mb-4">🔍 RAG Search Portal</h2>
+>>>>>>> d6274c67d4b4082a9d0080a4a150dc1192074b49
 
     @if (ViewBag.Message != null)
     {
@@ -66,7 +73,9 @@
                     <div class="card shadow-sm">
                         <div class="card-header">🗃️ Index SQL Data</div>
                         <div class="card-body">
+
                             <form asp-action="LoadDBData" method="post">
+
                                 <input type="hidden" name="file" value="" />
                                 <button type="submit" class="btn btn-dark w-100">Load from Database</button>
                             </form>
