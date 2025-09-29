@@ -1,4 +1,4 @@
-# RAG System with OpenAI Embeddings and Qdrant
+# RAG System in .NET with OpenAI Embeddings and Qdrant
 
 A Retrieval-Augmented Generation (RAG) system built with .NET that enables semantic search and question-answering over PDF documents and SQL database content using OpenAI embeddings and Qdrant vector database.
 
